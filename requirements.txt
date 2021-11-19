@@ -1,0 +1,5 @@
+streamlit==0.84.0
+httpx-oauth==0.3.5
+google-cloud-secret-manager
+altair
+pandas
