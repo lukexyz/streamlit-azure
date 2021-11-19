@@ -61,3 +61,6 @@ jobs:
           app-name: 'streamlit-analytics'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2A142894023D4CC38D1DAE51615275A2 }}
+      
+      - name: Run Streamlit App
+        run: streamlit run --server.port 8080 --server.enableCORS false demo.py
