@@ -1,4 +1,3 @@
-flask
-streamlit==1.2.0
+streamlit
 altair
 pandas
