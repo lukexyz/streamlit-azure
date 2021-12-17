@@ -1,34 +1,41 @@
-import streamlit as st
+from flask import Flask
+app = Flask(__name__)
 
-# ------------------------------------------------------
-st.title('Counter Example')
-# ------------------------------------------------------
+@app.route("/")
+def home():
+    return "Hello this is your app running"
 
-if 'count' not in st.session_state:
-    st.session_state.count = 0
+# import streamlit as st
 
-increment = st.button('Increment')
-if increment:
-    st.session_state.count += 1
+# # ------------------------------------------------------
+# st.title('Counter Example')
+# # ------------------------------------------------------
 
-decrement = st.button('Decrement')
-if decrement:
-    st.session_state.count -= 1
+# if 'count' not in st.session_state:
+#     st.session_state.count = 0
 
-st.write(st.session_state.count)
+# increment = st.button('Increment')
+# if increment:
+#     st.session_state.count += 1
+
+# decrement = st.button('Decrement')
+# if decrement:
+#     st.session_state.count -= 1
+
+# st.write(st.session_state.count)
 
 
-# ------------------------------------------------------
-st.title('Mirrored Widgets using Session State')
-# ------------------------------------------------------
-# https://blog.streamlit.io/session-state-for-streamlit/
+# # ------------------------------------------------------
+# st.title('Mirrored Widgets using Session State')
+# # ------------------------------------------------------
+# # https://blog.streamlit.io/session-state-for-streamlit/
 
-def update_first():
-    st.session_state.second = st.session_state.first
+# def update_first():
+#     st.session_state.second = st.session_state.first
 
-def update_second():
-    st.session_state.first = st.session_state.second
+# def update_second():
+#     st.session_state.first = st.session_state.second
 
-st.text_input(label='Textbox 1', key='first', on_change=update_first)
-st.text_input(label='Textbox 2', key='second', on_change=update_second)
+# st.text_input(label='Textbox 1', key='first', on_change=update_first)
+# st.text_input(label='Textbox 2', key='second', on_change=update_second)
 
