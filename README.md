@@ -6,7 +6,7 @@ Add github repo details to Azure App Service.
 
 # Setup 
 App Service > Configuration > Startup Command
-> `python -m streamlit run --server.port 8080 --server.enableCORS false streamlit.py`
+> `python -m streamlit run --server.port 8000 app.py`
 
 Automatically run virtual env and pip requirements
 App Service > Configuration > Application settings (on by default)
