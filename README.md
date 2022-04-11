@@ -9,11 +9,25 @@ Template code for deploying streamlit to azure web app.
 
 # 2. CICD Instance
 
-- Select publish `code` ✔️
+- Publish: ✔️ `code`
 - Runtime stack `python 3.9`
 - Operating system `Linux`
 
-# App Service Plan
+# 3. App Service Plan
+
+- Sku and size: `B1`
+  - `1.75 GB Memory`
+  - `$13.14 USD/Month` (first month free)
+
+# 4. Deployment
+
+- Continuous deployment: ✔️ `Enable`
+- Link github account and select
+  - `Organisation` > `Repository` > `Branch`
+
+# 5. Networking
+
+- (Optional) Enable network injection if internal `virtual network` is desired.
 
 App Service > Configuration > Startup Command
 
