@@ -7,11 +7,13 @@ Template code for deploying streamlit to azure web app.
 - Create new project on 🌐 [Azure App Service](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Web%2Fsites)
 - Select appropriate `subscription` and `resource group`
 
-# 2. CIDI
+# 2. CICD Instance
 
-Add github repo details to Azure App Service.
+- Select publish `code` ✔️
+- Runtime stack `python 3.9`
+- Operating system `Linux`
 
-# Setup
+# App Service Plan
 
 App Service > Configuration > Startup Command
 
